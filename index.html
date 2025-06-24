@@ -7,31 +7,108 @@
   <style>
     body {
       background: yellow;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       text-align: center;
       margin: 0;
       padding: 20px;
+      overflow-x: hidden;
+      animation: fadeIn 1.5s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     h1 {
-      margin-bottom: 40px;
+      margin-bottom: 10px;
+      font-size: 28px;
+      color: #333;
+    }
+    .bonus-banner {
+      background: linear-gradient(45deg, orange, red);
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      animation: pulse 2s infinite;
+      font-size: 18px;
+    }
+    .refer-box {
+      background: #fff8e1;
+      border: 2px dashed #ffa726;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 20px auto 30px;
+      max-width: 500px;
+      font-size: 16px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .refer-box strong {
+      color: #e65100;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    .highlight-offer {
+      background: #e3f2fd;
+      padding: 12px;
+      margin: 25px auto;
+      max-width: 600px;
+      border-left: 6px solid #2196f3;
+      font-size: 17px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .stats-box, .testimonials, .withdrawals {
+      background: #fff3e0;
+      padding: 15px;
+      margin: 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+    }
+    .stats-box h3, .testimonials h3, .withdrawals h3 {
+      margin: 0 0 10px;
+      color: #ef6c00;
+    }
+    .whatsapp-share {
+      margin: 30px 0;
+    }
+    .whatsapp-share a {
+      background: #25D366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      display: inline-block;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
     .game-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
+      perspective: 1000px;
     }
     .game-card {
       background: white;
       padding: 15px;
-      border-radius: 10px;
-      width: 150px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      border-radius: 15px;
+      width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
+    }
+    .game-card:hover {
+      transform: rotateY(10deg) rotateX(5deg) scale(1.05);
     }
     .game-card img {
       width: 100%;
       height: auto;
-      border-radius: 5px;
+      border-radius: 8px;
     }
     .game-card a {
       display: inline-block;
@@ -40,15 +117,55 @@
       color: white;
       padding: 8px 16px;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    .game-card a:hover {
+      background: darkgreen;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #444;
     }
   </style>
 </head>
 <body>
-  <h1>Play & Earn - Top Rummy & Slot Games</h1>
+  <h1>🚀 Play & Earn - Top Rummy & Slot Games</h1>
+  <div class="bonus-banner">
+    🏱 Join Now & Get ₹51 Bonus Instantly + 100% Extra on First Deposit! 🎯
+  </div>
+  <div class="refer-box">
+    📢 <strong>Refer & Earn:</strong> Invite your friends and earn ₹100 for every signup! 🔥<br>
+    Start sharing your referral link and grow your earnings.
+  </div>
+  <div class="highlight-offer">
+    🢱 Daily Spin & Win Offers | 🎉 Get Cashback on Every Game | 🏱 Exclusive VIP Rewards Weekly!
+  </div>
+  <div class="stats-box">
+    <h3>🔥 Dashboard Highlights</h3>
+    👥 Active Users Today: <strong>8,943+</strong><br>
+    🏆 Top Winner Today: <strong>₹18,500</strong><br>
+    🎲 Games Played Today: <strong>72,310</strong><br>
+    📈 New Players Joined: <strong>3,201</strong>
+  </div>
+  <div class="testimonials">
+    <h3>💬 What Players Say</h3>
+    <p>"Won ₹2,000 in my first game! Super smooth experience." – <strong>Amit, Delhi</strong></p>
+    <p>"Love the bonuses and daily rewards. Highly recommended!" – <strong>Sneha, Mumbai</strong></p>
+  </div>
+  <div class="withdrawals">
+    <h3>💸 Latest Withdrawals</h3>
+    <p>Ravi withdrew ₹5,000 just now!</p>
+    <p>Pooja withdrew ₹1,200 5 minutes ago</p>
+    <p>Ayaan withdrew ₹850 10 minutes ago</p>
+  </div>
+  <div class="whatsapp-share">
+    <a href="https://wa.me/?text=Try%20this%20awesome%20game%20site:%20https://yourdomain.com" target="_blank">📲 Share on WhatsApp</a>
+  </div>
   <div class="game-container">
     <div class="game-card">
-      <<img src="ind.jpeg" alt="IND Rummy">>
+      <img src="ind.jpeg" alt="IND Rummy">
       <a href="https://indrummyc.in?code=2BA861LDHSZ&t=1750141502" target="_blank">Play Now</a>
     </div>
     <div class="game-card">
@@ -88,5 +205,8 @@
       <a href="https://www.jaiho777agent5.com?code=GC2UZMTGAH3&t=1750152544" target="_blank">Play Now</a>
     </div>
   </div>
+  <footer>
+    <p>&copy; 2025 Play & Earn. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
