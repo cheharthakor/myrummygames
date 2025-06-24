@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Play & Earn - Rummy Games</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       background: yellow;
       font-family: 'Poppins', sans-serif;
@@ -20,16 +23,22 @@
     }
     h1 {
       margin-bottom: 10px;
-      font-size: 28px;
+      font-size: 6vw;
       color: #333;
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 10px;
+      flex-wrap: wrap;
     }
     .lady-left, .lady-right {
-      width: 50px;
+      width: 12vw;
       height: auto;
+      animation: float 3s ease-in-out infinite alternate;
+    }
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10px); }
     }
     .bonus-banner {
       background: linear-gradient(45deg, orange, red);
@@ -38,7 +47,7 @@
       border-radius: 10px;
       margin-bottom: 30px;
       animation: pulse 2s infinite;
-      font-size: 18px;
+      font-size: 4vw;
     }
     .refer-box {
       background: #fff8e1;
@@ -46,8 +55,8 @@
       padding: 15px;
       border-radius: 10px;
       margin: 20px auto 30px;
-      max-width: 500px;
-      font-size: 16px;
+      max-width: 90%;
+      font-size: 3.5vw;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     .refer-box strong {
@@ -58,27 +67,24 @@
       50% { transform: scale(1.05); }
       100% { transform: scale(1); }
     }
-    .highlight-offer {
-      background: #e3f2fd;
+    .highlight-offer, .stats-box, .testimonials, .withdrawals {
       padding: 12px;
       margin: 25px auto;
-      max-width: 600px;
-      border-left: 6px solid #2196f3;
-      font-size: 17px;
+      max-width: 95%;
+      font-size: 3.5vw;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
+    .highlight-offer {
+      background: #e3f2fd;
+      border-left: 6px solid #2196f3;
+    }
     .stats-box, .testimonials, .withdrawals {
       background: #fff3e0;
-      padding: 15px;
-      margin: 30px auto;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-      max-width: 600px;
     }
     .stats-box h3, .testimonials h3, .withdrawals h3 {
-      margin: 0 0 10px;
       color: #ef6c00;
+      font-size: 4.5vw;
     }
     .whatsapp-share {
       margin: 30px 0;
@@ -90,7 +96,7 @@
       border-radius: 50px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 4vw;
       display: inline-block;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
@@ -98,92 +104,80 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
-      perspective: 1000px;
+      gap: 20px;
     }
     .game-card {
       background: white;
-      padding: 15px;
-      border-radius: 15px;
-      width: 160px;
+      padding: 10px;
+      border-radius: 12px;
+      width: 42vw;
+      max-width: 160px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transform-style: preserve-3d;
-      transition: transform 0.5s;
+      transition: transform 0.3s;
     }
     .game-card:hover {
-      transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+      transform: scale(1.05);
     }
     .game-card img {
       width: 100%;
       height: auto;
-      border-radius: 8px;
+      border-radius: 6px;
     }
     .game-card a {
       display: inline-block;
       margin-top: 10px;
       background: green;
       color: white;
-      padding: 8px 16px;
+      padding: 6px 12px;
+      font-size: 3.5vw;
       text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-    .game-card a:hover {
-      background: darkgreen;
-    }
-    .promo-image {
-      margin: 30px auto;
-      max-width: 320px;
-    }
-    .promo-image img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      border-radius: 5px;
     }
     footer {
-      margin-top: 40px;
-      font-size: 14px;
+      margin-top: 30px;
+      font-size: 3vw;
       color: #444;
     }
   </style>
 </head>
 <body>
   <h1>
-    <img class="lady-left" src="playwinlady.png" alt="Lady Promo">
+    <img src="playwinlady.png" class="lady-left" alt="Play Now Girl">
     🚀 Play & Earn - Top Rummy & Slot Games
-    <img class="lady-right" src="playwinlady.png" alt="Lady Promo">
+    <img src="playwinlady.png" class="lady-right" alt="Play Now Girl">
   </h1>
-  <div class="bonus-banner">
-    🏱 Join Now & Get ₹51 Bonus Instantly + 100% Extra on First Deposit! 🎯
-  </div>
+
+  <div class="bonus-banner">🎁 Join Now & Get ₹51 Bonus Instantly + 100% Extra on First Deposit! 🔁</div>
+
   <div class="refer-box">
-    📢 <strong>Refer & Earn:</strong> Invite your friends and earn ₹100 for every signup! 🔥<br>
-    Start sharing your referral link and grow your earnings.
+    🔖 <strong>Refer & Earn:</strong> Invite your friends and earn ₹100 for every signup!<br>📈 Start sharing your referral link and grow your earnings.
   </div>
+
   <div class="highlight-offer">
-    🢱 Daily Spin & Win Offers | 🎉 Get Cashback on Every Game | 🏱 Exclusive VIP Rewards Weekly!
+    🏆 Daily Spin & Win Offers | 🎉 Get Cashback on Every Game | 📃 Exclusive VIP Rewards Weekly!
   </div>
+
   <div class="stats-box">
     <h3>🔥 Dashboard Highlights</h3>
     👥 Active Users Today: <strong>8,943+</strong><br>
-    🏆 Top Winner Today: <strong>₹18,500</strong><br>
-    🎲 Games Played Today: <strong>72,310</strong><br>
-    📈 New Players Joined: <strong>3,201</strong>
+    💸 Top Winner Today: <strong>₹18,500</strong><br>
+    🃏 Games Played Today: <strong>72,310</strong><br>
+    👤 New Players Joined: <strong>3,201</strong>
   </div>
+
   <div class="testimonials">
     <h3>💬 What Players Say</h3>
-    <p>"Won ₹2,000 in my first game! Super smooth experience." – <strong>Amit, Delhi</strong></p>
-    <p>"Love the bonuses and daily rewards. Highly recommended!" – <strong>Sneha, Mumbai</strong></p>
+    "Won ₹2,000 in my first game! Super smooth experience." – <strong>Amit, Delhi</strong><br>
+    "Love the bonuses and daily rewards. Highly recommended!" – <strong>Sneha, Mumbai</strong>
   </div>
+
   <div class="withdrawals">
     <h3>💸 Latest Withdrawals</h3>
-    <p>Ravi withdrew ₹5,000 just now!</p>
-    <p>Pooja withdrew ₹1,200 5 minutes ago</p>
-    <p>Ayaan withdrew ₹850 10 minutes ago</p>
+    Ravi withdrew ₹5,000 just now!<br>
+    Pooja withdrew ₹1,200 5 minutes ago<br>
+    Ayaan withdrew ₹850 10 minutes ago
   </div>
-  <div class="whatsapp-share">
-    <a href="https://wa.me/?text=Try%20this%20awesome%20game%20site:%20https://yourdomain.com" target="_blank">📲 Share on WhatsApp</a>
-  </div>
+
   <div class="game-container">
     <div class="game-card">
       <img src="ind.jpeg" alt="IND Rummy">
@@ -191,43 +185,48 @@
     </div>
     <div class="game-card">
       <img src="jackpot.jpeg" alt="789 Jackpots">
-      <a href="https://789jackpots.in?code=VJHRdW3GJTL&t=1750141618" target="_blank">Play Now</a>
+      <a href="https://789jackpots.in?code=VJHRdW3GTL&t=1750141618" target="_blank">Play Now</a>
     </div>
     <div class="game-card">
       <img src="slots567.jpeg" alt="567 Slots">
-      <a href="https://567slots11.com?code=9UXZ97B9SB5&t=1750146952" target="_blank">Play Now</a>
+      <a href="https://567slots11.com?code=9UXG279B5SB&t=1750146952" target="_blank">Play Now</a>
     </div>
     <div class="game-card">
       <img src="vip101z.jpeg" alt="101Z VIP">
-      <a href="https://101zvip7.com?code=JLWC2PZ9NLU&t=1750147255" target="_blank">Play Now</a>
+      <a href="https://101zvip7.com?code=JLCWPZ9NLU&t=1750147255" target="_blank">Play Now</a>
     </div>
     <div class="game-card">
       <img src="winner.jpeg" alt="Slots Winner">
-      <a href="https://slotswinnerb.com/?code=1UT5R85NlE3&t=1750147384" target="_blank">Play Now</a>
+      <a href="https://slotswinnerbb.com?code=1UT5R85N1E3&t=1750147384" target="_blank">Play Now</a>
     </div>
     <div class="game-card">
       <img src="spin.jpeg" alt="Slots Spin">
-      <a href="https://www.slotspinj.com?code=C1AE8XP76K&t=1750147647" target="_blank">Play Now</a>
+      <a href="https://www.slotsspinj.com?code=C1AE8XP767K&t=1750147647" target="_blank">Play Now</a>
     </div>
     <div class="game-card">
       <img src="saga.jpeg" alt="Saga Slots">
-      <a href="https://www.sagaslots2.com?code=0HGKFLY2M9&t=1750152063" target="_blank">Play Now</a>
+      <a href="https://www.sagaslots2.com?code=0HQ6KFLYZM9&t=1750152063" target="_blank">Play Now</a>
     </div>
     <div class="game-card">
       <img src="rummy365.jpeg" alt="Rummy 365">
       <a href="https://365oops.in?code=2WYLCL7UM3K&t=1750152265" target="_blank">Play Now</a>
     </div>
     <div class="game-card">
-      <img src="mbm.jpeg" alt="MBM Bet">
-      <a href="https://www.mbmbet14.com?code=UHP9K5DXXX0&t=1750152468" target="_blank">Play Now</a>
+      <img src="mbm.jpeg" alt="MBM BET">
+      <a href="https://www.mbmmbet14.com?code=UHP9K5DXXKXX&t=1750152468" target="_blank">Play Now</a>
     </div>
     <div class="game-card">
       <img src="jaiho.jpeg" alt="Jaiho777">
       <a href="https://www.jaiho777agent5.com?code=GC2UZMTGAH3&t=1750152544" target="_blank">Play Now</a>
     </div>
   </div>
+
+  <div class="whatsapp-share">
+    <a href="https://wa.me/?text=Play%20Rummy%20and%20Win%20Real%20Cash%20at%20https://allyonoandteenpatii.store" target="_blank">📤 Share on WhatsApp</a>
+  </div>
+
   <footer>
-    <p>&copy; 2025 Play & Earn. All Rights Reserved.</p>
+    &copy; 2025 AllyonoAndTeenpatii.Store | All Rights Reserved.
   </footer>
 </body>
 </html>
